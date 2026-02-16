@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { logger } from '../../utils/logger.js';
-import { MarketingConfig } from '../../config/index.js';
+import { logger } from '../../utils/logger';
+import { MarketingConfig } from '../../config';
 
 export interface Campaign {
   id: string;

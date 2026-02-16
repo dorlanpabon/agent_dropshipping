@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 import cron from 'node-cron';
-import { logger } from './utils/logger.js';
-import { loadConfig } from './config/index.js';
-import { AutonomousAgent } from './agents/AutonomousAgent.js';
+import { logger } from './utils/logger';
+import { loadConfig } from './config';
+import { AutonomousAgent } from './agents/AutonomousAgent';
 
 // Load environment variables
 dotenv.config();

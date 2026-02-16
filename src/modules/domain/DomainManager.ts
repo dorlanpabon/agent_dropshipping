@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { logger } from '../../utils/logger.js';
-import { DomainConfig } from '../../config/index.js';
+import { logger } from '../../utils/logger';
+import { DomainConfig } from '../../config';
 
 export interface DomainAvailability {
   domain: string;

@@ -1,6 +1,6 @@
-import { shopifyApi } from '@shopify/shopify-api';
-import { logger } from '../../utils/logger.js';
-import { ShopifyConfig } from '../../config/index.js';
+import { shopifyApi, LATEST_API_VERSION } from '@shopify/shopify-api';
+import { logger } from '../../utils/logger';
+import { ShopifyConfig } from '../../config';
 
 export interface StoreDetails {
   id: string;
@@ -42,6 +42,8 @@ export class ShopifyManager {
       apiSecretKey: this.config.apiSecret,
       scopes: ['read_products', 'write_products', 'read_orders', 'write_orders'],
       hostName: this.config.storeDomain,
+      apiVersion: LATEST_API_VERSION,
+      isEmbeddedApp: false,
     });
   }
 

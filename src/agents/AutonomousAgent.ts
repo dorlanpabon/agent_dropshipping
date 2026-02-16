@@ -1,13 +1,13 @@
 import { OpenAI } from 'openai';
-import { logger } from '../../utils/logger.js';
-import { Config } from '../../config/index.js';
-import { StateManager } from '../../state/StateManager.js';
-import { DomainManager } from '../../modules/domain/DomainManager.js';
-import { ShopifyManager } from '../../modules/shopify/ShopifyManager.js';
-import { ProductManager } from '../../modules/products/ProductManager.js';
-import { SalesManager } from '../../modules/sales/SalesManager.js';
-import { MarketingManager } from '../../modules/marketing/MarketingManager.js';
-import { AnalyticsManager } from '../../modules/analytics/AnalyticsManager.js';
+import { logger } from '../../utils/logger';
+import { Config } from '../../config';
+import { StateManager } from '../../state/StateManager';
+import { DomainManager } from '../../modules/domain/DomainManager';
+import { ShopifyManager } from '../../modules/shopify/ShopifyManager';
+import { ProductManager } from '../../modules/products/ProductManager';
+import { SalesManager } from '../../modules/sales/SalesManager';
+import { MarketingManager } from '../../modules/marketing/MarketingManager';
+import { AnalyticsManager } from '../../modules/analytics/AnalyticsManager';
 
 export class AutonomousAgent {
   private config: Config;
