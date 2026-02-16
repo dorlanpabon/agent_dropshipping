@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { logger } from '../../utils/logger';
-import { DropiConfig } from '../../config';
+import { logger } from 'utils/logger';
+import { DropiConfig } from 'config';
 
 export interface DropiProduct {
   id: string;

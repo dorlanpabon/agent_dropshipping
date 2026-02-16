@@ -1,6 +1,6 @@
 import { shopifyApi, LATEST_API_VERSION } from '@shopify/shopify-api';
-import { logger } from '../../utils/logger';
-import { ShopifyConfig } from '../../config';
+import { logger } from 'utils/logger';
+import { ShopifyConfig } from 'config';
 
 export interface StoreDetails {
   id: string;
@@ -31,7 +31,10 @@ export class ShopifyManager {
 
   constructor(config: ShopifyConfig) {
     this.config = config;
-    this.initializeShopify();
+    // Only initialize if credentials are provided
+    if (config.apiKey && config.apiSecret && config.storeDomain) {
+      this.initializeShopify();
+    }
   }
 
   private initializeShopify() {
